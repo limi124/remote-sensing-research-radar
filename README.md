@@ -1,59 +1,102 @@
-# Remote Sensing Research Radar
+﻿# Remote Sensing Research Radar
 
-A Codex skill for tracking research frontiers in geospatial AI, remote sensing big data, and transferable computer vision methods.
+[![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](#)
+[![Research Radar](https://img.shields.io/badge/Research-Frontier%20Radar-2563eb)](#)
+[![Remote Sensing](https://img.shields.io/badge/Domain-Remote%20Sensing-059669)](#)
+[![No SAR by Default](https://img.shields.io/badge/SAR-Excluded%20by%20Default-b91c1c)](#)
 
-This skill is designed for researchers who want to follow recent papers, open-source projects, datasets, benchmarks, and research trends in optical remote sensing and related computer vision fields. It explicitly avoids SAR-focused work by default, unless SAR is requested.
+**Language:** English | [中文](README.zh-CN.md)
 
-## Features
+A Codex skill for tracking research frontiers in **geospatial AI**, **remote sensing big data**, and **transferable computer vision methods**.
 
-- Search and summarize recent remote sensing papers from arXiv, Papers with Code, GitHub, Hugging Face, conference pages, and benchmark pages.
-- Track frontier topics in optical remote sensing, multispectral/hyperspectral imagery, geospatial big data, Earth observation foundation models, and multi-temporal learning.
-- Include transferable computer vision methods such as foundation models, open-vocabulary segmentation, vision-language models, domain adaptation, OOD detection, weak supervision, and efficient inference.
-- Filter out SAR, PolSAR, InSAR, radar-only, microwave-only, and SAR-optical fusion work by default.
-- Rank candidate papers and projects by novelty, technical depth, evidence, reproducibility, trend signal, and transferability to remote sensing.
-- Generate daily or weekly research radar reports.
-- Produce related work tables, deep paper notes, reproducibility plans, and publishable research ideas.
+This project helps researchers continuously monitor new papers, open-source projects, datasets, benchmarks, and research trends. It focuses on optical remote sensing and geospatial AI, while also scanning computer vision methods that can be transferred into remote sensing research.
+
+> SAR, PolSAR, InSAR, radar-only, microwave-only, and SAR-optical fusion work are excluded by default unless explicitly requested.
+
+## Why This Skill
+
+Remote sensing research moves quickly across multiple communities: geoscience, computer vision, machine learning, GIScience, and Earth observation. Important ideas often appear first in general CV or ML papers before being adapted to satellite and aerial imagery.
+
+This skill is designed to bridge that gap:
+
+| Need | What the skill does |
+| --- | --- |
+| Track new papers | Searches recent arXiv, Papers with Code, GitHub, Hugging Face, conference pages, and benchmark pages |
+| Find useful CV methods | Screens computer vision papers for remote sensing transfer potential |
+| Avoid noisy directions | Filters out SAR-focused work by default |
+| Build a reading queue | Ranks papers and projects by novelty, evidence, reproducibility, and fit |
+| Generate research ideas | Converts frontier trends into publishable research directions |
+| Prepare related work | Produces comparison tables and structured literature summaries |
+
+## Core Capabilities
+
+- Daily or weekly research radar reports
+- Paper and GitHub project screening
+- Remote sensing frontier tracking
+- Computer-vision-to-remote-sensing transfer analysis
+- Related work table generation
+- Deep paper reading notes
+- Reproducibility planning
+- Publishable idea generation
 
 ## Research Scope
 
-Recommended non-SAR directions:
+### Remote Sensing and Geospatial AI
 
-- Earth observation foundation models
-- Optical and multispectral remote sensing
-- Hyperspectral image learning
-- Multi-temporal satellite image modeling
-- Optical change detection
-- Remote sensing vision-language models
-- Cross-region and cross-sensor generalization
-- GIS/vector/raster fusion
-- Large-scale efficient remote sensing inference
-- Urban, agriculture, ecology, land-cover, and environmental monitoring applications
+| Area | Example Topics |
+| --- | --- |
+| Earth observation foundation models | MAE, JEPA, contrastive learning, masked modeling, geolocation/time embeddings |
+| Optical and multispectral imagery | Sentinel-2, Landsat, aerial RGB, UAV imagery, VHR scene understanding |
+| Hyperspectral learning | Spectral-spatial modeling, band selection, domain generalization |
+| Multi-temporal modeling | Crop monitoring, land-cover dynamics, urban expansion, ecological time series |
+| Change detection | Optical building, land-cover, urban, and ecological change detection |
+| Remote sensing VLMs | Captioning, VQA, grounding, open-vocabulary segmentation |
+| Cross-domain generalization | Domain adaptation, OOD detection, few-shot learning, spatial bias |
+| GIS and raster-vector fusion | Road networks, parcels, POIs, building footprints, topology-aware learning |
+| Efficient inference | Tiling, streaming, compression, active learning, uncertainty-aware mapping |
 
-Transferable computer vision directions:
+### Transferable Computer Vision
 
-- Self-supervised learning and masked image modeling
-- Vision transformers and foundation models
-- Open-vocabulary segmentation and detection
-- Vision-language models and visual grounding
-- Video/temporal models for change reasoning
-- Domain generalization and test-time adaptation
-- Weakly supervised, semi-supervised, and active learning
-- Efficient inference for large images
+| CV Direction | Remote Sensing Transfer Path |
+| --- | --- |
+| Foundation models | Adapt pretrained visual representations to multispectral, high-resolution, or multi-temporal imagery |
+| Open-vocabulary segmentation | Map flexible land-cover classes and local taxonomy labels |
+| Vision-language models | Support remote sensing VQA, captioning, grounding, and retrieval |
+| Video and temporal models | Transfer long-range temporal reasoning to satellite image time series |
+| Domain adaptation | Improve cross-city, cross-country, cross-season, and cross-sensor robustness |
+| Weak/semi-supervised learning | Reduce annotation cost for large-scale mapping |
+| Efficient inference | Handle large remote sensing images with tiled or compressed inference |
+
+## Scoring Rubric
+
+Candidate papers and projects are ranked by:
+
+| Criterion | Meaning |
+| --- | --- |
+| Novelty | New problem, method, benchmark, or strong reframing |
+| Technical depth | Clear algorithmic or modeling contribution |
+| Evidence | Strong experiments, ablations, datasets, and metrics |
+| Reproducibility | Code, data, weights, and clean instructions |
+| Trend signal | Active authors, labs, stars, benchmarks, or conference attention |
+| Transferability | Clear path from CV or ML to remote sensing constraints |
+| User fit | Matches non-SAR geospatial remote sensing research goals |
 
 ## Installation
 
-Install this skill into your local Codex skills directory:
+Install the skill from this repository:
 
 ```powershell
-python C:\Users\shuo\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py --repo <your-github-username>/<your-repo-name> --path skills/remote-sensing-research-radar
+python C:\Users\shuo\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py --repo limi124/remote-sensing-research-radar --path skills/remote-sensing-research-radar
 ```
 
-After installation, restart Codex so the skill can be discovered.
+Restart Codex after installation so the skill can be discovered.
 
 ## Recommended Repository Structure
 
 ```text
-your-repo/
+remote-sensing-research-radar/
+├─ README.md
+├─ README.zh-CN.md
 └─ skills/
    └─ remote-sensing-research-radar/
       ├─ SKILL.md
@@ -66,24 +109,22 @@ your-repo/
 ## Example Prompts
 
 ```text
-帮我做本周地信遥感大数据前沿雷达，不要 SAR，重点关注遥感基础模型和多时相变化检测。
+Use remote-sensing-research-radar to find recent remote sensing foundation model papers and open-source projects from the past month. Exclude SAR.
 ```
 
 ```text
-用 remote-sensing-research-radar 找最近一个月值得读的遥感基础模型论文和开源项目。
+Build a weekly geospatial AI research radar. Focus on optical remote sensing, multi-temporal modeling, and transferable computer vision methods.
 ```
 
 ```text
-帮我追踪可迁移到遥感的计算机视觉论文，重点关注开放词汇分割、VLM 和 domain adaptation。
+Find computer vision papers on open-vocabulary segmentation, VLMs, and domain adaptation that could inspire remote sensing research.
 ```
 
 ```text
-基于最近的遥感和 CV 前沿，帮我提出 5 个可以冲高水平论文的选题。
+Based on recent remote sensing and CV frontiers, propose five publishable research ideas for a high-impact paper.
 ```
 
-## Output Format
-
-Typical weekly radar output:
+## Typical Output
 
 ```text
 Weekly takeaways
@@ -122,6 +163,6 @@ Publishable research ideas
 
 ## Notes
 
-- The skill is optimized for Chinese research workflows, but paper titles and technical terms are preserved in English where appropriate.
-- Web search should be used for fresh research reports, because arXiv, GitHub, Papers with Code, and conference pages change frequently.
-- SAR-related research is excluded by default to match the intended research direction.
+- Fresh research reports should use web search because arXiv, GitHub, Papers with Code, and conference pages change frequently.
+- English paper titles and technical terms should be preserved even in Chinese reports.
+- SAR-related work is excluded by default to keep the radar aligned with optical remote sensing and geospatial AI research.
