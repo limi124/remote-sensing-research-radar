@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remote Sensing Research Radar"
+  short_description: "Track and synthesize remote sensing research frontiers."
+  default_prompt: "Track recent optical remote sensing and geospatial AI papers, projects, and datasets; summarize frontier trends and propose research ideas."
